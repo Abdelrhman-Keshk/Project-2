@@ -50,8 +50,8 @@ color: #2B448C;
 
 .logo{
 position: relative;
-width: 150px;
-height: 52px;
+max-width: 150px;
+max-height: 52px;
 /* top: -25px; */
 user-select: none;
 }
@@ -270,11 +270,15 @@ opacity: 1;
 display: flex;
 width: 100%;
 justify-content: space-between;
+flex-wrap: wrap;
+gap: 20px;
 }
 
 .sec2-par{
 position: relative;   
-width: 50%;
+/* max-width: 50%;
+max-height: 300px; */
+flex: 1;
 background-color: #eff7f7;
 padding: 20px;
 }
@@ -319,12 +323,16 @@ margin-left: 20px;
 display: flex;
 justify-content: space-between;
 width: 49%;
+flex-wrap: wrap;
+gap: 17px;
+flex: 1;
 }
 
 .discount-item{
 position: relative;   
-width: 48.8%;
-height: 300px;   
+/* width: 48.8%;
+height: 300px;    */
+flex: 1;
 background-image: url(../images/PC\ deal.jpg);
 background-size: cover;
 padding: 20px;
@@ -352,6 +360,7 @@ display: flex;
 width: 100%;
 justify-content: space-between;
 margin-top: 50px;
+flex-wrap: wrap;
 }
 
 .service-item{
@@ -410,6 +419,16 @@ background-position: center -715px;
 
 .service-item:hover .service-icon5{
 background-position: center -807px;
+}
+
+@media (max-width: 576px){
+
+    .service-item{
+       border-right: none;
+       border-bottom: 1px solid #2B448C;
+       padding-bottom: 50px;
+    }
+    
 }
 
 /* third-section////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -550,6 +569,12 @@ transform: rotateY(180deg) scale(0.95);
 transition: 0.2s;
 }
 
+@media (max-width: 576px) {
+    .products-parent{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
 /* footer////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .footer-container{
@@ -565,20 +590,20 @@ position: relative;
 width: 80%;   
 margin: auto;
 padding: 50px;
-display: grid;
-grid-template-columns: repeat(4,1fr);
-grid-column-gap: 50px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 user-select: none;
 }
 
 .footer-logo img{
-width: 180px;
+max-width: 180px;
 margin-bottom: 20px;
 user-select: none;
 }
 
 .footer-par{
-width: 400px;
+max-width: 400px;
 color: #e7e6e6;
 margin-bottom: 20px;
 }
@@ -592,7 +617,6 @@ user-select: none;
 .f-accinfo-list{
 list-style: none;
 margin-top: 30px;
-margin-left: 100px;
 }
 
 #f-list-head,
@@ -644,6 +668,7 @@ text-align: center;
 color: white;
 border-radius: 10%;
 box-shadow: 0px 0px 20px rgba(0, 26, 255, 0.3);
+margin-bottom: 10px;
 }
 
 .contact i:hover{
