@@ -266,16 +266,14 @@ opacity: 1;
 /* pad-parent////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .pad-parent{
-display: flex;
+display: grid;
 width: 100%;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 20px;
+grid-template-columns: repeat(2,1fr);
+grid-column-gap: 18px;
 }
 
 .sec2-par{
 position: relative;   
-flex: 1;
 background-color: #eff7f7;
 padding: 20px;
 }
@@ -317,21 +315,17 @@ margin-left: 20px;
 /* discounts///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .discounts{
-display: flex;
-justify-content: space-between;
-width: 49%;
-flex-wrap: wrap;
-gap: 18px;
-flex: 1;
+display: grid;
+height: 300px;
+grid-template-columns: repeat(2,1fr);
+grid-column-gap: 18px;
 }
 
 .discount-item{
 position: relative;   
-flex: 1;
 background-image: url(../images/PC\ deal.jpg);
 background-size: cover;
 padding: 20px;
-font-size: 19px;
 transition: 0.4s;
 }
 
@@ -671,6 +665,21 @@ text-transform: uppercase;
 /* responsive////////////////////////////////////////////////////////////////////////////////////////////// */
 
 @media (max-width: 1400px){
+
+    .pad-parent{
+        display: grid;
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1.5fr;
+        grid-row-gap: 18px;
+        }
+
+        .discounts{
+        grid-template-columns: repeat(2,1fr);; 
+        grid-column-gap: 28px;
+        width: 100%;
+        height: 460px;
+        }
     
     .products-parent{
         grid-template-columns: repeat(2,1fr);
@@ -679,12 +688,27 @@ text-transform: uppercase;
 
 @media (max-width: 991px){
 
+    .pad-parent{
+        display: grid;
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 18px;
+        }
+
+        .discounts{
+        grid-template-columns: repeat(2,1fr);; 
+        grid-column-gap: 15px;
+        width: 100%;
+        height: 300px;
+        }
+
     .sec-items-parent{
         grid-template-columns: repeat(1,1fr);
     }
     
         .products-parent{
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(1,1fr);
         }
     }
 
@@ -698,9 +722,24 @@ text-transform: uppercase;
 
 @media (max-width: 767px){
 
+    .pad-parent{
+        display: grid;
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 18px;
+        }
+
     .sec-items-parent{
         grid-template-columns: repeat(1,1fr);
     }
+
+    .discounts{
+        grid-template-columns: repeat(2,1fr);; 
+        grid-column-gap: 15px;
+        width: 100%;
+        height: 250px;
+        }
 
     .products-parent{
         grid-template-columns: repeat(1,1fr);
@@ -709,9 +748,25 @@ text-transform: uppercase;
 
 @media (max-width: 567px){
 
+    .pad-parent{
+        display: grid;
+        width: 100%;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+        grid-row-gap: 18px;
+        }
+
     .sec-items-parent{
         grid-template-columns: repeat(1,1fr);
     }
+
+    .discounts{
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 18px;
+        height: 720px;
+        width: 100%;
+        }
 
     .service-item{
         border-right: none;
